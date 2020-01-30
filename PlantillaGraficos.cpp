@@ -25,8 +25,8 @@ void actualizar() {
 void dibujarTriangulo() {
 	glPushMatrix();
 
-	//glTranslatef(0.0f, -0.30f, 0.0f);
-	//glRotatef(angulo, 0.0f, 1.0f, 0.0f);
+	//glTranslatef(0.4f, -0.5f, 0.0f);
+	glRotatef(angulo, 0.0f, 1.0f, 0.0f);
 	//glScalef(0.5f, 2.0f, 1.0f);
 
 	glBegin(GL_TRIANGLES);
@@ -38,10 +38,12 @@ void dibujarTriangulo() {
 
 	glEnd();
 	glPopMatrix();
+
 	glPushMatrix();
 
-	//glTranslatef(0.0f, -0.30f, 0.0f);
-	//glRotatef(angulo, 0.0f, 1.0f, 0.0f);
+
+	glTranslatef(-0.15f, -0.30f, 0.0f);
+	glRotatef(angulo, 0.0f, 1.0f, 0.0f);
 	//glScalef(0.5f, 2.0f, 1.0f);
 
 	glBegin(GL_TRIANGLES);
@@ -54,6 +56,21 @@ void dibujarTriangulo() {
 	glEnd();
 	glPopMatrix();
 
+	glPushMatrix();
+
+	glTranslatef(0.15f, -0.30f, 0.0f);
+	glRotatef(angulo, 0.0f, 1.0f, 0.0f);
+	//glScalef(0.5f, 2.0f, 1.0f);
+
+	glBegin(GL_TRIANGLES);
+
+	glColor3f(0.7f, 0.1f, 0.8f);
+	glVertex3f(0.0f, 0.15f, 0.0f);
+	glVertex3f(-0.15f, -0.15f, 0.0f);
+	glVertex3f(0.15f, -0.15f, 0.0f);
+
+	glEnd();
+	glPopMatrix();
 
 }
 
